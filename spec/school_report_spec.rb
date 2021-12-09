@@ -29,4 +29,9 @@ describe SchoolReport do
     school_report.add_scores("Amber, Amber, Green")
     expect(school_report.generate_report).to eq("Test 1:\nGreen: 1\nAmber: 1\nRed: 1\n---\nTest 2:\nGreen: 1\nAmber: 2\nRed: 0")
   end
+
+  it 'returns message if no scores entered' do
+    school_report.add_scores("")
+    expect(school_report.generate_report).to eq("Test 1:\nNo results given")
+  end
 end

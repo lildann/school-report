@@ -1,9 +1,9 @@
 ## Code Review 30/11/2021
 
-School Reports Company
-Aiming to assist teachers understand students performance over multiple tests in one given year
+### School Reports Company
+The brief is to assist teachers in understanding students performance over multiple tests in one given year.
 
-Build system that accepts multiple tests entries and reports collectively
+Build a system that accepts multiple tests entries and reports collectively.
 
 | INPUT | OUTPUT |
 |-------|--------|
@@ -14,10 +14,10 @@ Build system that accepts multiple tests entries and reports collectively
 |add_scores("") | "Test 1:\nNo results given"
 |add_scores("") | ArgumentError "Input must be a comma-separated string"
 
-
-Class - Report
-Methods:
+#### Model
+* Class: SchoolReport
+* Methods:
 * add_scores(results) parameter is a String
 * generate_report() --> String 
 
-##### further edge cases: spelling mistakes and missing commas / spaces
+##### Further edge cases: spelling mistakes and missing commas / spaces

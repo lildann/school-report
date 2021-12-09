@@ -10,6 +10,7 @@ class SchoolReport
     @green_total = 0
     @amber_total = 0
     @red_total = 0
+
     results.each do |result| 
       if result == "Green"
         @green_total += 1
@@ -19,7 +20,8 @@ class SchoolReport
         @red_total += 1
       end
     end
-    generate_single_test
+
+    scores.empty? ? @all_scores << "No results given" : generate_single_test
     generate_report
   end
 
